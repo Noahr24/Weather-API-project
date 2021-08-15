@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="Description" content="Enter your description here"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+        <script src="js/main.js" defer></script>
+        <title>Weather Tracker</title>
+    </head>
+    <body class="body-color">
+        <header>
+            <div class="col-12 d-flex justify-content-center"><h1>Weather Tracker</h1></div>
+        </header>
+        <!-- Creating Form to Input the Season and Round -->
+        <form id="weatherForm"> 
+            <div class="row d-flex justify-content-center">
+                <div class="col-2">
+                    <input class="form-control" type="text" id="city" placeholder="City" aria-label="default input example" required>
+                </div>
+            </div>
+            <!-- Creating the buttons, and adding the on-click to them.  -->
+            <div class="container d-flex justify-content-center mt-4">
+                <button type="submit" class="btn btn-success px-5 me-3">Get Weather</button>
+            </div>
+        </form>
+        <div>
+            <h1></h1>
+        </div>
+        <!-- Creating the Table -->
+        <div class="container mt-5">
+            <div class="col-6 offset-3 d-flex justify-content-center">
+                <table class="table table-hover">
+                    <thead class="table-danger">
+                        <tr >
+                            <th scope="col">High</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body" >
+                        <tr class="red" id="table1">
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="col-6 offset-3 d-flex justify-content-center">
+                <table class="table table-hover">
+                    <thead class="table-primary">
+                        <tr>
+                            <th scope="col">Low</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <tr class="blue" id="table2">
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> 
+        <div class="container mt-5">
+            <div class="col-6 offset-3 d-flex justify-content-center">
+                <table class="table table-hover">
+                    <thead class="table-warning">
+                        <tr>
+                            <th scope="col">Forecast</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <tr class="white" id="table3">
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="col-6 offset-3 d-flex justify-content-center">
+                <table class="table table-hover">
+                    <thead class="table-success">
+                        <tr>
+                            <th scope="col">Humidity</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <tr class="white" id="table4">
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
